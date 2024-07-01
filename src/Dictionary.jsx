@@ -42,7 +42,7 @@ export default function Dictionary(){
     <h2>Dictionary App</h2>
     <input type="text" value={dispaly} onChange={handleChange} placeholder="Search for a word.." />
     <button onClick={handleClick}>Search</button><br></br>
-    <p5>Definition:</p5>
+    <p>Definition:</p>
     {search && <p>{Definition}</p>}
 
     </>);

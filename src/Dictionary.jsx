@@ -16,7 +16,7 @@ const Dict=
 export default function Dictionary(){
     
     const [dispaly,setDisplay]= useState("")
-    const [defi,setDifi]= useState("")
+    const [Definition,setDefinition]= useState("")
     const [search,setSearch]= useState(false)
 
     function handleChange(e){
@@ -25,9 +25,9 @@ export default function Dictionary(){
         setDisplay(type)
         let result = Dict.find(item => type === item.word)
         if(result){
-            setDifi(result.meaning)
+            setDefinition(result.meaning)
         }else{
-            setDifi("Word not found in the dictionary.")
+            setDefinition("Word not found in the dictionary.")
         }
       
         
@@ -39,11 +39,11 @@ export default function Dictionary(){
 
 
     return (<>
-    <h2>DICTIONARY APP</h2>
+    <h2>Dictionary App</h2>
     <input type="text" value={dispaly} onChange={handleChange} placeholder="Search for a word.." />
-    <button onClick={handleClick}>Search</button>
-    <h5>Definition: </h5>
-    {search && <p>{defi}</p>}
+    <button onClick={handleClick}>Search</button><br></br>
+    <p5>Definition:</p5>
+    {search && <p>{Definition}</p>}
 
     </>);
 }
